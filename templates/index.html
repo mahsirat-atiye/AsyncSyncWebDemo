@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>NetLab Project</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+          integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <style>
+        .bd-example {
+            padding: 1.5rem;
+            margin-right: 0;
+            margin-left: 0;
+            border-width: .2rem;
+            border-top-width: 0.2rem;
+            border-right-width: 0.2rem;
+            border-bottom-width: 0.2rem;
+            border-left-width: 0.2rem;
+        }
+    </style>
+
+</head>
+<body>
+
+<div class="card">
+    <div class="card-body">
+        <h5 class="card-title font-italic font-weight-bold">Network Lab Project</h5>
+        <p class="card-text">Atiyeh Jamshidpoor (94103835)</p>
+        <p class="card-text">Maryam Hakak (94103868)</p>
+    </div>
+</div>
+
+<div class="card">
+    <div class="card-body">
+
+        <h5 class="card-title font-italic ">Abstract</h5>
+        <p class="card-text">
+            This Project is about implementation of
+            <b>
+                Asynchronous Tasks in Django with Redis and Celery
+            </b>
+        </p>
+    </div>
+</div>
+
+
+<div class="row bd-example">
+    <div class="col-sm-6">
+        <div class="card">
+            <div class="card-body">
+                <h5 class="card-title">Main Thread Task</h5>
+                <p class="card-text">
+                    By clicking on this button, you are requesting to do a heavy task on main thread.
+                    So as a user you have to wait without any interaction until the task is done.
+                </p>
+
+                <a class="btn btn-danger btn-lg btn-block font-italic" role="button"
+                   href="{% url 'instant' %}">
+                    Main Thread Task
+
+                </a>
+
+            </div>
+        </div>
+    </div>
+    <div class="col-sm-6">
+        <div class="card">
+            <div class="card-body">
+                <h5 class="card-title">Special title treatment</h5>
+                <p class="card-text">
+
+                    By clicking on this button, you are requesting to do a heavy task on the background rather than main thread.
+                    So as a user you can interact with the site instantly!
+                </p>
+                <a class="btn btn-success btn-lg btn-block font-italic" role="button"
+
+                   href="{% url 'few_seconds' %}">Background Task (Async Task)
+                </a>
+
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="p-3 mb-2 bg-info text-white font-italic text-center">
+    <h1>
+        {% if text %}
+            {{ text }}
+        {% endif %}
+    </h1>
+</div>
+
+
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
+</body>
+</html>
